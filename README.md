@@ -1,7 +1,7 @@
 lanbahn
 =======
 
-project home pages:    http://www.lanbahn.de  and   http://www.oscale.net/en
+project home pages:    http://www.lanbahn.net  and   http://www.oscale.net/en
 
 Software for controlling Model Railroads via Networks (UDP Multicast commands)
 
