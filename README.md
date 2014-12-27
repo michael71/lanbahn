@@ -15,6 +15,7 @@ The standard “channel” concept is also retained, so each accessory decoder a
 
 There are a few commands available:
 
+<pre>
 S = SET 
 R = READ 
     set address 911 to state 1 by sending the message: “S 911 1″. Trigger reading of 
@@ -39,9 +40,9 @@ D = START OF DAY
 A = Announce
     regularly decoder capabilities can be announce, exact format still unclear
 
-
-
-commands starting with “F” are used in routing, to announce that a route was set or cleared.
+F = Routing
+    commands starting with “F” are used in routing, to announce that a route was set or cleared.
+</pre>
 
 More to come soon ....
 
