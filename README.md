@@ -22,7 +22,7 @@ SET &lt;addr&gt; &lt;data&gt;  and  READ &lt;addr&gt;
     channel 911 with “R 911″ – and the decoder with address 911 will respond with it’s 
     current state “S 911 1″.
 
-FB &lt;adr&gt; &lt;data&gt; (FEEDBACK) 
+FB &lt;addr&gt; &lt;data&gt; (FEEDBACK) 
     messages from the accessory decoders were introduced after the experience of a noisy 
     environment at the Warley Show (where 1 out of 500 commands did not reach the accessory)
     – “FB 911 1″ meaning: command understood and having set decoder 911 to 1.
