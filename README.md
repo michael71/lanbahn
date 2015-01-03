@@ -13,18 +13,25 @@ is choosen because ease of debugging.
 
 The standard “channel” concept is also retained, so each accessory decoder and each locomotive are having a unique “address” (from 1 to 10000(?)).
 
-There are a few commands available:
+PROTOCOL Rev. 2.0:
 
 <pre>
-S = SET 
-R = READ 
+SET <addr> <data>
+READ <addr>
     set address 911 to state 1 by sending the message: “S 911 1″. Trigger reading of 
     channel 911 with “R 911″ – and the decoder with address 911 will respond with it’s current state “S 911 1″.
 
-OK = FEEDBACK 
+FB <adr> <data> (FEEDBACK) 
     messages from the accessory decoders were introduced after the experience of a noisy environment at
     the Warley Show (where 1 out of 500 commands did not reach the accessory) – “OK 911 1″ meaning: command 
     understood and having set decoder 911 to 1.
+    
+LOCO <addr> <speed> <functions>
+    set speed and functions of a locomotive. Locos have a separate command to allow address overlaps between
+    accessory decoders and locomotives to allow use of loco-numbers (like 7411) as addresses.
+    
+FL <addr> <speed> <functions> (= FEEBACK from Loco)
+    tbd.
 
 L = LOCK
     is the same a set (“L 911 1″ = set channel 911 to 1 and lock the decoder), except that it locks 
@@ -34,16 +41,16 @@ L = LOCK
 U = UNLOCK 
     is unlocking a decoder (“U 987″ = unlock channel 987)
     
-D = START OF DAY
-    "D 0" means: all decoders back to start position (i.e. red for signal, closed for turnouts)
+SOD = START OF DAY
+    "SOD 0" means: all decoders back to start position (i.e. red for signal, closed for turnouts)
     
 A = Announce
     regularly decoder capabilities can be announce, exact format still unclear
 
-F = Routing
-    commands starting with “F” are used in routing, to announce that a route was set or cleared.
+RT <n> (= Routing)
+    commands starting with “R” are used in routing, to announce that a route was set or cleared.
+    
 </pre>
 
-More to come soon ....
 
 
