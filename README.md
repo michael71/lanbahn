@@ -17,7 +17,7 @@ are having a unique “address” (from 1 to 10000(?)).
 PROTOCOL Rev. 2.0:
 
 <pre>
-SET &lt;addr&gt; &lt;data&gt;  and READ &lt;addr&gt;
+SET &lt;addr&gt; &lt;data&gt;  and  READ &lt;addr&gt;
     set address 911 to state 1 by sending the message: “S 911 1″. Trigger reading of 
     channel 911 with “R 911″ – and the decoder with address 911 will respond with it’s 
     current state “S 911 1″.
@@ -35,16 +35,16 @@ LOCO &lt;addr&gt; &lt;speed&gt; &lt;functions&gt;
 FL &lt;addr&gt; &lt;speed&gt; &lt;functions&gt; (= FEEBACK from Loco)
     tbd.
 
-L = LOCK
+LOCK &lt;addr&gt;
     is the same a set (“L 911 1″ = set channel 911 to 1 and lock the decoder), except that it
     locks the decoder state afterwards (i.e. decoder will not respond to a new “SET” until it
     is unlocked again or a new "Start of Day" message is received).
 
-U = UNLOCK 
+UNLOCK &lt;addr&gt;
     is unlocking a decoder (“U 987″ = unlock channel 987)
     
 SOD = START OF DAY
-    "SOD 0" means: all decoders back to start position (i.e. red for signal, closed for turnouts)
+    "SOD" means: all decoders back to start position (i.e. red for signal, closed for turnouts)
     
 A = Announce
     regularly decoder capabilities can be announce, exact format still unclear
