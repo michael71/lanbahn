@@ -23,33 +23,36 @@ SET &lt;addr&gt; &lt;data&gt;  and  READ &lt;addr&gt;
     current state “S 911 1″.
 
 FB &lt;addr&gt; &lt;data&gt; (FEEDBACK) 
-    messages from the accessory decoders were introduced after the experience of a noisy 
-    environment at the Warley Show (where 1 out of 500 commands did not reach the accessory)
-    – “FB 911 1″ meaning: command understood and having set decoder 911 to 1.
+    messages from the accessory decoders were introduced after the experience of a 
+    noisy     environment at the Warley Show (where 1 out of 500 commands did not
+    reach the accessory) – “FB 911 1″ meaning: command understood and having set 
+    decoder 911 to 1.
     
 LOCO &lt;addr&gt; &lt;speed&gt; &lt;functions&gt;
-    set speed and functions of a locomotive. Locos have a separate command to allow address 
-    overlaps between accessory decoders and locomotives to allow use of loco-numbers (like 7411)
-    as addresses.
+    set speed and functions of a locomotive. Locos have a separate command to allow
+    address overlaps between accessory decoders and locomotives to allow use of loco-
+    numbers (like 7411) as addresses.
     
 FL &lt;addr&gt; &lt;speed&gt; &lt;functions&gt; (= FEEBACK from Loco)
     tbd.
 
 LOCK &lt;addr&gt;
-    is the same a set (“L 911 1″ = set channel 911 to 1 and lock the decoder), except that it
-    locks the decoder state afterwards (i.e. decoder will not respond to a new “SET” until it
-    is unlocked again or a new "Start of Day" message is received).
+    is the same a set (“L 911 1″ = set channel 911 to 1 and lock the decoder), except
+    that it locks the decoder state afterwards (i.e. decoder will not respond to a
+    new “SET” until it is unlocked again or a new "Start of Day" message is received).
 
 UNLOCK &lt;addr&gt;
     is unlocking a decoder (“U 987″ = unlock channel 987)
     
 SOD = START OF DAY
-    "SOD" means: all decoders back to start position (i.e. red for signal, closed for turnouts)
+    "SOD" means: all decoders back to start position (i.e. red for signal, closed for
+    turnouts)
     
 A = Announce
     regularly decoder capabilities can be announce, exact format still unclear
 
 RT &lt;n&gt; (= Routing)
-    commands starting with “R” are used in routing, to announce that a route was set or cleared.
+    commands starting with “R” are used in routing, to announce that a route was set 
+    or cleared.
     
 </pre>
