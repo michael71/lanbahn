@@ -5,7 +5,11 @@ project home pages:    http://www.lanbahn.net  and   http://www.oscale.net/en
 
 Software for controlling Model Railroads via Networks (UDP Multicast commands)
 
-The Lanbahn protocol is actually very simple:
+<table border="0"><tr><td>
+<a href="http://www.lanbahn.net" target="_blank"><img src="http://www.lanbahn.net/wp-content/uploads/2014/12/lanbahn-sigplus-rev.0.21-292x300.png" alt="lanbahn-sigplus-rev.0.2" width="292" height="300" /></a></td><td>
+<a href="http://www.lanbahn.net" target="_blank"><img src="http://www.lanbahn.net/wp-content/uploads/2014/12/lonstoke_west_signal-227x300.png" alt="lonstoke_west_signal" width="227" height="300" /></a></td></tr></table>
+
+The Lanbahn <b>protocol</b> is actually very simple:
 
 Every device (smartphone, tablet, decoder, …) is communicating via UDP Multicasts to everyone 
 in the network (just like the tradional model railroad “Bus” systems). ASCII transmission 
@@ -14,7 +18,7 @@ is choosen because ease of debugging.
 The standard “channel” concept is also retained, so each accessory decoder and each locomotive
 are having a unique “address” (from 1 to 10000(?)).
 
-PROTOCOL Rev. 2.0:
+<h3>PROTOCOL Rev. 2.0:</h3>
 
 <pre>
 SET &lt;addr&gt; &lt;data&gt;  and  READ &lt;addr&gt;
