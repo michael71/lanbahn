@@ -3,7 +3,8 @@ lanbahn
 
 project home pages:    http://www.lanbahn.net  and   http://www.oscale.net/en
 
-Software for controlling Model Railroads via Networks (UDP Multicast commands)
+Software (and Hardware) for controlling Model Railroads via Networks (UDP Multicast commands) -
+LAN-Bahn (german) = local area network - model railroad (english)
 
 <table border="0"><tr><td>
 <a href="http://www.lanbahn.net" target="_blank"><img src="http://www.lanbahn.net/wp-content/uploads/2014/12/lanbahn-sigplus-rev.0.21-292x300.png" alt="lanbahn-sigplus-rev.0.2" width="292" height="300" /></a></td><td>
